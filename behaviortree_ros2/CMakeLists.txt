@@ -19,6 +19,7 @@ foreach(PACKAGE ${THIS_PACKAGE_DEPS})
     find_package(${PACKAGE} REQUIRED )
 endforeach()
 
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 generate_parameter_library(
     bt_executor_parameters
