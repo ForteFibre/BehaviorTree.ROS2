@@ -562,6 +562,8 @@ inline void RosActionNode<T>::cancelGoal()
     RCLCPP_ERROR(logger(), "Failed to get result call failed :( for [%s]",
                  action_name_.c_str());
   }
+
+  goal_handle_.reset();
 }
 
 }  // namespace BT
